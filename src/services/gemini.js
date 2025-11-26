@@ -22,10 +22,15 @@ export const sendMessageToGemini = async (modelId, history, message) => {
 
         // Convert history to Gemini format
         // History should be array of { role: 'user' | 'model', parts: [{ text: string }] }
-        const chatHistory = history.map(msg => ({
+        let chatHistory = history.map(msg => ({
             role: msg.role === 'user' ? 'user' : 'model',
             parts: [{ text: msg.content }]
         }));
+
+        // Gemini requires the first message to be from the user
+        if (chatHistory.length > 0 && chatHistory[0].role === 'model') {
+            chatHistory = chatHistory.slice(1);
+        }
 
         const chat = model.startChat({
             history: chatHistory,
