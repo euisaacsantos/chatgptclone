@@ -7,7 +7,7 @@ import { FiMenu } from 'react-icons/fi';
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
   const [theme, setTheme] = useState('dark'); // Default to dark mode as requested
-  const [currentModel, setCurrentModel] = useState('gemini-pro');
+  const [currentModel, setCurrentModel] = useState('gemini-1.5-flash');
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);

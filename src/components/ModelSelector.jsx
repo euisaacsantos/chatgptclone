@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import { FiChevronDown, FiCheck } from 'react-icons/fi';
 
 const models = [
-    { id: 'gemini-pro', name: 'Gemini Pro', description: 'Great for everyday tasks' },
-    { id: 'gemini-pro-vision', name: 'Gemini Pro Vision', description: 'Multimodal model' },
-    { id: 'gemini-ultra', name: 'Gemini Ultra', description: 'Most capable model' }
+    { id: 'gemini-1.5-flash', name: 'Gemini 1.5 Flash', description: 'Fast and efficient' },
+    { id: 'gemini-1.5-pro', name: 'Gemini 1.5 Pro', description: 'Most capable model' },
+    { id: 'gemini-2.0-flash-exp', name: 'Gemini 2.0 Flash', description: 'Experimental next-gen' }
 ];
 
 const ModelSelector = ({ currentModel, onSelectModel }) => {
